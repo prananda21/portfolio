@@ -1,5 +1,6 @@
 import type { Project } from "@/types/project";
 import { Link } from "react-router-dom";
+import { TechIcon } from "./TechIcon";
 
 type ProjectProps = {
   project: Project;
@@ -16,6 +17,7 @@ export function ProjectCard({ project }: ProjectProps) {
       <ul className="tag-list" aria-label={`${project.title} stack`}>
         {project.stack.map((item) => (
           <li className="tag" key={item}>
+            <TechIcon name={item} />
             {item}
           </li>
         ))}

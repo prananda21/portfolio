@@ -1,0 +1,183 @@
+import {
+  Blocks,
+  Braces,
+  Cloud,
+  Code2,
+  Database,
+  Globe2,
+  Hammer,
+  MonitorCog,
+  Server,
+  ShieldCheck,
+  Smartphone,
+  Terminal,
+  TestTube2,
+  Workflow,
+  type LucideIcon,
+} from "lucide-react";
+import type { ReactElement, SVGProps } from "react";
+import {
+  SiBun,
+  SiCss,
+  SiDocker,
+  SiEthereum,
+  SiGit,
+  SiGithub,
+  SiGmail,
+  SiGo,
+  SiGooglecloud,
+  SiHtml5,
+  SiJavascript,
+  SiNodedotjs,
+  SiReact,
+  SiRedis,
+  SiRust,
+  SiSentry,
+  SiSwift,
+  SiTypescript,
+  SiVite,
+  type IconType as SimpleIcon,
+} from "@icons-pack/react-simple-icons";
+
+const simpleIconMap: Record<string, SimpleIcon> = {
+  bun: SiBun,
+  cli: SiRust,
+  "cloud services (aws, gcp)": SiGooglecloud,
+  "containerization (docker)": SiDocker,
+  css: SiCss,
+  docker: SiDocker,
+  email: SiGmail,
+  git: SiGit,
+  github: SiGithub,
+  go: SiGo,
+  html: SiHtml5,
+  javascript: SiJavascript,
+  "node.js": SiNodedotjs,
+  react: SiReact,
+  "background task management (redis)": SiRedis,
+  rust: SiRust,
+  "monitoring and logging (sentry)": SiSentry,
+  swift: SiSwift,
+  "swift fundamentals": SiSwift,
+  typescript: SiTypescript,
+  vite: SiVite,
+  "blockchain integration (via smart contract - viem/ethers library)":
+    SiEthereum,
+};
+
+function LinkedInIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" {...props}>
+      <rect
+        x="3.5"
+        y="3.5"
+        width="17"
+        height="17"
+        rx="2"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M8 10.4V16"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M8 8.1V8"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="2.3"
+      />
+      <path
+        d="M11.5 16V10.4"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M11.5 12.6C12.2 11.5 13 10.3 14.6 10.3C16.2 10.3 17 11.4 17 13.3V16"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="1.8"
+      />
+    </svg>
+  );
+}
+
+const customIconMap: Record<
+  string,
+  (props: SVGProps<SVGSVGElement>) => ReactElement
+> = {
+  linkedin: LinkedInIcon,
+};
+
+const lucideIconMap: Record<string, LucideIcon> = {
+  "api design": Server,
+  "authentication basics": ShieldCheck,
+  "blockchain integration (via smart contract - viem/ethers library)": Blocks,
+  "cloud services (aws, gcp)": Cloud,
+  cli: Terminal,
+  css: Code2,
+  "data caching strategies": Database,
+  "data modeling": Database,
+  "database management": Database,
+  go: Braces,
+  html: Globe2,
+  "ios development": Smartphone,
+  "mobile product thinking": Smartphone,
+  "node.js": Server,
+  "package managers": Hammer,
+  react: Code2,
+  "responsive layouts": MonitorCog,
+  "rest apis": Server,
+  rust: Braces,
+  "service logic": Workflow,
+  swift: Smartphone,
+  "swift fundamentals": Smartphone,
+  terminal: Terminal,
+  "testing and debugging techniques": TestTube2,
+};
+
+type TechIconProps = {
+  name: string;
+};
+
+export function TechIcon({ name }: TechIconProps) {
+  const normalizedName = name.toLowerCase();
+  const CustomIconComponent = customIconMap[normalizedName];
+
+  if (CustomIconComponent) {
+    return (
+      <CustomIconComponent
+        aria-label={`${name} icon`}
+        className="tech-icon tech-icon--custom"
+        focusable="false"
+      />
+    );
+  }
+
+  const SimpleIconComponent = simpleIconMap[normalizedName];
+
+  if (SimpleIconComponent) {
+    return (
+      <SimpleIconComponent
+        aria-label={`${name} icon`}
+        className="tech-icon tech-icon--brand"
+        color="currentColor"
+        focusable="false"
+      />
+    );
+  }
+
+  const Icon = lucideIconMap[normalizedName] ?? Code2;
+
+  return (
+    <Icon
+      aria-label={`${name} icon`}
+      className="tech-icon"
+      focusable="false"
+      strokeWidth={1.75}
+    />
+  );
+}
