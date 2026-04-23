@@ -8,7 +8,7 @@ type ProjectProps = {
 
 export function ProjectCard({ project }: ProjectProps) {
   return (
-    <Link className="project-card" to={`/project/${project.slug}`}>
+    <Link className="project-card" to={`/projects/${project.slug}`}>
       <p className="eyebrow">
         {project.year} / {project.status}
       </p>
