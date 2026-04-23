@@ -220,15 +220,32 @@ textarea {
     gap: 18px;
     min-height: 100%;
     padding: 20px;
+    cursor: pointer;
     text-decoration: none;
     transition:
         border-color 160ms ease,
         background-color 160ms ease;
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card:focus-visible {
     border-color: var(--border-strong);
     background: var(--surface-raised);
+}
+
+.project-card:focus-visible {
+    outline: 1px solid var(--text);
+    outline-offset: 3px;
+}
+
+.project-card-title-link {
+    width: fit-content;
+    text-decoration: none;
+}
+
+.project-card-title-link:hover h3,
+.project-access-link:hover {
+    color: var(--text);
 }
 
 .project-card h3,
@@ -278,6 +295,25 @@ textarea {
 
 .tech-icon--custom {
     color: currentColor;
+}
+
+.project-card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 2px;
+}
+
+.project-access-link {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid var(--border);
+    padding: 6px 9px;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    text-decoration: none;
 }
 
 .contact-card-header {
