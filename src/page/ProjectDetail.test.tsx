@@ -26,6 +26,16 @@ describe("ProjectDetail", () => {
     expect(screen.getByText(project.role)).toBeInTheDocument();
   });
 
+  it("renders external access links for a known project", () => {
+    const project = PROJECTS[0];
+
+    renderProjectRoute(`/projects/${project.slug}`);
+
+    expect(
+      screen.getByRole("link", { name: /access uniconv/i }),
+    ).toHaveAttribute("href", project.links[0].href);
+  });
+
   it("renders a not-found state for an unknown slug", () => {
     renderProjectRoute("/projects/missing-project");
 

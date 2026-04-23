@@ -5,7 +5,8 @@ export const PROFILE: Profile = {
   title: "Backend Developer",
   location: "Indonesia",
   focus: "Backend systems, APIs, and practical web interfaces",
-  status: "Good at Typescript and Learning Rust, Go, also iOS development",
+  status:
+    "Good at Typescript and still exploring about Rust, Go, also iOS development",
   email: "pranandayoga21@gmail.com",
   intro:
     "Backend-focused developer working primarily with TypeScript. I like building APIs, modeling data flow, and creating frontend interfaces when the product needs a clear way to expose the system.",
