@@ -5,12 +5,12 @@ export const PROFILE: Profile = {
   title: "Backend Developer",
   location: "Indonesia",
   focus: "Backend systems, APIs, and practical web interfaces",
-  status: "Learning Rust, Go, and iOS development",
+  status: "Good at Typescript and Learning Rust, Go, also iOS development",
   email: "pranandayoga21@gmail.com",
   intro:
     "Backend-focused developer working primarily with TypeScript. I like building APIs, modeling data flow, and creating frontend interfaces when the product needs a clear way to expose the system.",
   about:
-    "I am strongest around backend thinking: services, data shape, API contracts, and the logic that keeps an application understandable. I can work on frontend when needed, especially with React and TypeScript, and I am steadily learning Rust, Go, and iOS development to broaden the kinds of systems I can build.",
+    "A highly motivated Backend Developer with a passion for constructing efficient, scalable, and secure backend systems. Proficient in Node.js, Bun, Express.js, NestJS, and Modern Framework like Hono and ElysiaJS. Skilled in integrating backend services with PostgreSQL, Redis, MongoDB, and securely managing secrets using Vault.",
   values: [
     "Clear data flow",
     "Small maintainable modules",
