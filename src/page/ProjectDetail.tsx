@@ -28,6 +28,25 @@ export function ProjectDetail() {
         </p>
         <h1 className="page-title">{project.title}</h1>
         <p className="lede">{project.description}</p>
+        {project.links.length > 0 ? (
+          <div
+            className="project-card-links"
+            aria-label={`${project.title} links`}
+          >
+            {project.links.map((link) => (
+              <a
+                aria-label={`Access ${link.label}`}
+                className="project-access-link"
+                href={link.href}
+                key={link.href}
+                rel="noreferrer"
+                target="_blank"
+              >
+                Access Here: {link.label}
+              </a>
+            ))}
+          </div>
+        ) : null}
       </section>
 
       <section className="detail-list" aria-label="Project details">
