@@ -50,7 +50,7 @@ export function Home() {
       </section>
 
       <section className="section">
-        <SectionHeader kicker="02 / stack" title="Skills in the dark" />
+        <SectionHeader kicker="02 / stack" title="My Skills" />
         <div className="grid">
           {SKILLS.slice(0, 3).map((group) => (
             <SkillGroup group={group} key={group.title} />

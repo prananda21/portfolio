@@ -1,3 +1,4 @@
+import { TechIcon } from "@/components/TechIcon";
 import { PROFILE } from "@/data/profile";
 
 export function Contact() {
@@ -15,8 +16,13 @@ export function Contact() {
       <section className="grid" aria-label="Contact links">
         {PROFILE.contactLinks.map((link) => (
           <a className="project-card" href={link.href} key={link.label}>
-            <p className="eyebrow">signal</p>
-            <h3>{link.label}</h3>
+            <div className="contact-card-header">
+              <span className="contact-icon">
+                <TechIcon name={link.label} />
+              </span>
+              <p className="eyebrow">signal</p>
+            </div>
+            <h3 className="contact-title">{link.label}</h3>
             <p>{link.href}</p>
           </a>
         ))}
