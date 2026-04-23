@@ -1,4 +1,5 @@
 import type { SkillGroup } from "@/types/skills";
+import { TechIcon } from "./TechIcon";
 
 type SkillGroupProps = {
   group: SkillGroup;
@@ -14,6 +15,7 @@ export function SkillGroup({ group }: SkillGroupProps) {
       <ul className="tag-list">
         {group.items.map((item) => (
           <li className="tag" key={item}>
+            <TechIcon name={item} />
             {item}
           </li>
         ))}
