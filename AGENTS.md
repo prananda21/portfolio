@@ -24,25 +24,10 @@ Use TypeScript and functional React components. Components and exported page mod
 Vitest runs in a `jsdom` environment with Testing Library and `@testing-library/jest-dom` configured by `src/test/setup.ts`. Add or update tests when changing routing, rendered content, data helpers, or user-visible behavior. Prefer accessibility-first queries like `screen.getByRole(...)`. Name tests after the unit or route under test, for example `App.test.tsx`, `ProjectDetail.test.tsx`, or `project.test.ts`.
 
 ## Commit & Pull Request Guidelines
-
-Git history is currently minimal, so keep commit subjects short, imperative, and specific, for example `add project detail tests`. Before opening a pull request, run `npm run lint`, `npm run test:run`, and `npm run build`. PR descriptions should summarize the change, list verification performed, link related issues when available, and include screenshots or short screen recordings for visual UI changes. for every changes that made to the project, the commit message must include the following tags:
-- `#bugfix` for bug fixes
-- `#feature` for new features
-- `#refactor` for code refactors without user-visible changes
-- `#content` for changes to portfolio content
-- `#docs` for documentation updates
-- `#test` for changes to tests or test setup
-- `#build` for changes to build scripts or configuration
-- `#chore` for other maintenance tasks that don't fit the above categories
-- `#wip` for work-in-progress commits that are not ready to be merged
-- `#skip` for commits that should be excluded from release notes or changelogs, such as minor fixes or formatting changes
-- `#release` for commits that trigger a new release or deployment, such as merging a PR to main or tagging a commit with a version number
-- `#hotfix` for urgent fixes that need to be deployed immediately, such as critical bugs or security issues
-- `#rollback` for commits that revert a previous commit, such as undoing a bad change or restoring a previous state
-- `#fix` for commits that fix a specific issue or bug, such as correcting a typo or resolving a test failure
-- `#style` for commits that only change formatting, whitespace, or code style, without affecting functionality
-- `#perf` for commits that improve performance, such as optimizing algorithms or reducing load times
-- `#ci` for commits that affect continuous integration or deployment, such as updating CI configuration
+- Follow Conventional Commit style seen in history: `feat: ...`, `fix: ...`, `refactor: ...`, `chore: ...`, `hotfix: ...`.
+- Keep commits scoped (one logical change per commit) and use imperative summaries.
+- PRs should include: purpose, key changes, test evidence (`bun run test`, lint/format status), and related issue/ticket.
+- For API changes, include sample request/response or endpoint notes.
 
 ## Agent-Specific Instructions
 
