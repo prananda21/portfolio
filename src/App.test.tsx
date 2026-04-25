@@ -29,6 +29,42 @@ describe("App routes", () => {
     ).toBeInTheDocument();
   });
 
+  it("renders the certification index route", () => {
+    render(
+      <MemoryRouter initialEntries={["/certifications"]}>
+        <App />
+      </MemoryRouter>,
+    );
+
+    expect(
+      screen.getByRole("heading", { name: /certification archive/i }),
+    ).toBeInTheDocument();
+  });
+
+  it("renders the education index route", () => {
+    render(
+      <MemoryRouter initialEntries={["/educations"]}>
+        <App />
+      </MemoryRouter>,
+    );
+
+    expect(
+      screen.getByRole("heading", { name: /education archive/i }),
+    ).toBeInTheDocument();
+  });
+
+  it("renders the experience route", () => {
+    render(
+      <MemoryRouter initialEntries={["/experience"]}>
+        <App />
+      </MemoryRouter>,
+    );
+
+    expect(
+      screen.getByRole("heading", { name: /experience archive/i }),
+    ).toBeInTheDocument();
+  });
+
   it("renders the about route", () => {
     render(
       <MemoryRouter initialEntries={["/about"]}>
