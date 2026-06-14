@@ -191,6 +191,11 @@ textarea {
     align-items: start;
 }
 
+.archive-list {
+    display: grid;
+    gap: 14px;
+}
+
 .two-column {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -199,6 +204,9 @@ textarea {
 
 .panel,
 .project-card,
+.certification-card,
+.education-card,
+.work-card,
 .skill-group {
     border: 1px solid var(--border);
     background: var(--surface);
@@ -249,16 +257,75 @@ textarea {
 }
 
 .project-card h3,
+.certification-card h3,
+.education-card h3,
+.work-card h3,
 .skill-group h3 {
     margin: 0;
     color: var(--text);
 }
 
 .project-card p,
+.certification-card p,
+.education-card p,
+.work-card p,
 .skill-group p {
     margin: 0;
     color: var(--muted);
     line-height: 1.6;
+}
+
+.certification-card {
+    display: grid;
+    gap: 18px;
+    min-height: 100%;
+    padding: 20px;
+}
+
+.certification-card-header,
+.certification-card-copy,
+.education-card-header,
+.education-card-copy,
+.education-description,
+.work-card-header,
+.work-card-copy,
+.work-description {
+    display: grid;
+    gap: 8px;
+}
+
+.education-description,
+.work-description {
+    gap: 12px;
+}
+
+.education-card,
+.work-card {
+    display: grid;
+    gap: 18px;
+    min-height: 100%;
+    padding: 20px;
+}
+
+.certification-issuer,
+.education-institution,
+.work-company {
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 0.82rem;
+}
+
+.education-field,
+.work-meta {
+    font-family: var(--mono);
+}
+
+.work-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    color: var(--muted);
+    font-size: 0.82rem;
 }
 
 .tag-list,
@@ -412,6 +479,7 @@ textarea {
     }
 
     .grid,
+    .archive-list,
     .two-column,
     .detail-list {
         grid-template-columns: 1fr;

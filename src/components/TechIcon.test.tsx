@@ -20,4 +20,20 @@ describe("TechIcon", () => {
 
     expect(screen.getByLabelText("LinkedIn icon")).toBeInTheDocument();
   });
+
+  it("uses brand icons for education technologies when available", () => {
+    render(
+      <>
+        <TechIcon name="Express.JS" />
+        <TechIcon name="PostgreSQL" />
+      </>,
+    );
+
+    expect(screen.getByLabelText("Express.JS icon")).toHaveClass(
+      "tech-icon--brand",
+    );
+    expect(screen.getByLabelText("PostgreSQL icon")).toHaveClass(
+      "tech-icon--brand",
+    );
+  });
 });

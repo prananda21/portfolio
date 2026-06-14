@@ -1,0 +1,47 @@
+{
+  "project_name": "portfolio-profile",
+  "languages": {
+    "JavaScript": {
+      "language_servers": [
+        "!biomejs/biome",
+        "!typescript-language-server",
+        "...",
+      ],
+    },
+    "TypeScript": {
+      "language_servers": [
+        "!biomejs/biome",
+        "!typescript-language-server",
+        "...",
+      ],
+    },
+    "TSX": {
+      "language_servers": [
+        "!biomejs/biome",
+        "!typescript-language-server",
+        "...",
+      ],
+    },
+    "JSON": {
+      "language_servers": [
+        "!biomejs/biome",
+        "!typescript-language-server",
+        "...",
+      ],
+    },
+    "JSONC": {
+      "language_servers": [
+        "!biomejs/biome",
+        "!typescript-language-server",
+        "...",
+      ],
+    },
+    "CSS": {
+      "language_servers": [
+        "!biomejs/biome",
+        "!typescript-language-server",
+        "...",
+      ],
+    },
+  },
+}
