@@ -6,7 +6,7 @@ export const PROFILE: Profile = {
   location: "Indonesia",
   focus: "Backend systems, APIs, and practical web interfaces",
   status:
-    "Good at Typescript and still exploring about Rust, Go, also iOS development",
+    "Good at Typescript and still exploring about Rust and iOS development",
   email: "pranandayoga21@gmail.com",
   intro:
     "Backend-focused developer working primarily with TypeScript. I like building APIs, modeling data flow, and creating frontend interfaces when the product needs a clear way to expose the system.",
@@ -18,7 +18,7 @@ export const PROFILE: Profile = {
     "Readable APIs",
     "Interfaces that reveal how the system works",
   ],
-  learning: ["Rust", "Go", "Swift", "iOS development"],
+  learning: ["Rust", "iOS development"],
   contactLinks: [
     {
       label: "Email",
