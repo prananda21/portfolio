@@ -2,8 +2,11 @@ import { describe, expect, it } from "vitest";
 import { featuresProjects, getProjectBySlug, PROJECTS } from "./projects";
 
 describe("projects data", () => {
-  it("exposes exactly one featured projects", () => {
-    expect(featuresProjects).toHaveLength(1);
+  it("exposes projects marked as featured", () => {
+    expect(featuresProjects.every((project) => project.features)).toBe(true);
+    expect(featuresProjects.some((project) => project.slug === "keynest")).toBe(
+      true,
+    );
   });
 
   it("finds a project by slug", () => {

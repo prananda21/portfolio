@@ -27,7 +27,7 @@ export const SKILLS: SkillGroup[] = [
   {
     title: "Languages",
     detail: "Primary and growing languages.",
-    items: ["TypeScript", "JavaScript", "Rust", "Go", "Swift"],
+    items: ["TypeScript", "JavaScript", "Rust"],
   },
   {
     title: "Tools",
@@ -42,7 +42,7 @@ export const SKILLS: SkillGroup[] = [
     ],
   },
   {
-    title: "Mobile Interest",
+    title: "Interest",
     detail: "A future path worth exploring.",
     items: ["iOS development", "Swift fundamentals", "Mobile product thinking"],
   },
